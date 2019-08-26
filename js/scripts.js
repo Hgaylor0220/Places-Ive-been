@@ -13,12 +13,26 @@ function Place(location, landmarks, year, notes) {
   this.notes = notes
 }
 
-var England = new Place("London, Bristol, and Guernsey", "Big Ben, Buckingham Palace, The London Eye", "May 2018", "This trip was a jolly good time!");
+var england = new Place("London, Bristol, and Guernsey", "Big Ben, Buckingham Palace, The London Eye", "May 2018", "This trip was a jolly good time!");
 
-var NewYork = new Place("New York City", " Central Park, World Trade Center, Statue of Liberty", "June 2019", "Lots of walking and using public transportation, bring your good shoes!");
+var newYork = new Place("New York City", " Central Park, World Trade Center, Statue of Liberty", "June 2019", "Lots of walking and using public transportation, bring your good shoes!");
 
-var WashingtonDC = new Place("Washington DC", "White House, Washington Monument, Smithsonian", "May 2019", "Lots of history, but very muggy!");
+var washingtonDC = new Place("Washington DC", "White House, Washington Monument, Smithsonian", "May 2019", "Lots of history, but very muggy!");
 
-var Italy = new Place("Como", "Lake Como, Bellagio", "May 2018", "Beautiful scenery, even better food and wine.")
+var italy = new Place("Como", "Lake Como, Bellagio", "May 2018", "Beautiful scenery, even better food and wine.")
 
-var Washington = new Place(" Carson City"," Fall Creek Falls, White Salmon", "August 2019", "Great white water activiteis including kayaking and rafting, must be skilled to stay alive. Great hikes if you wear the right shoes.")
+var washington = new Place(" Carson City"," Fall Creek Falls, White Salmon", "August 2019", "Great white water activiteis including kayaking and rafting, must be skilled to stay alive. Great hikes if you wear the right shoes.")
+
+// USER INTERFACE LOGIC
+
+$(document).ready(function() {
+  $("li").click();
+});
+
+function appendInformation(country) {
+      $(".location").append(country.location)
+      $(".landmarks").append(country.landmarks)
+      $(".year").append(country.year)
+      $(".notes").append(country.notes)
+    $("#england-object").show();
+}
