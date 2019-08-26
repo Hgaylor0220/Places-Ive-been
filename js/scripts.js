@@ -24,15 +24,17 @@ var italy = new Place("Como", "Lake Como, Bellagio", "May 2018", "Beautiful scen
 var washington = new Place(" Carson City"," Fall Creek Falls, White Salmon", "August 2019", "Great white water activiteis including kayaking and rafting, must be skilled to stay alive. Great hikes if you wear the right shoes.")
 
 // USER INTERFACE LOGIC
-
 $(document).ready(function() {
-  $("li").click();
+  $("#england").click(function() {
+   console.log("im clicked!");
+   $(".location").empty();
+   $(".location").append(england.location);
+   $(".landmarks").empty();
+   $(".landmarks").append(england.landmarks);
+   $(".year").empty();
+   $(".year").append(england.year);
+   $(".notes").empty();
+   $(".notes").append(england.notes);
+   $("#england-object").show();
+ });
 });
-
-function appendInformation(country) {
-      $(".location").append(country.location)
-      $(".landmarks").append(country.landmarks)
-      $(".year").append(country.year)
-      $(".notes").append(country.notes)
-    $("#england-object").show();
-}
